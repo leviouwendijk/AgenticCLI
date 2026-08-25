@@ -25,7 +25,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticDomains.git",
       "state" : {
         "branch" : "master",
-        "revision" : "c14ae56dc7786a34f37dc1c214482b787356ce67"
+        "revision" : "2e2353a921e9b5017d55e080ec2c48501e80b535"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/leviouwendijk/Interfaces.git",
       "state" : {
         "branch" : "master",
-        "revision" : "9615d272db6ea2e7e70d52d02886fcaacfece8cd"
+        "revision" : "e847267bc31f076923a36c34ee21cec2f116742a"
       }
     },
     {
