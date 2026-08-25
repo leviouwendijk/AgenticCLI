@@ -1,0 +1,19 @@
+uuid = "656C207F-DE7E-41D4-81FB-7B1D6E3AC142"
+name = "agentic"
+types {
+    "binary"
+}
+versions {
+    release {
+        major = 0
+        minor = 1
+        patch = 0
+    }
+}
+compile {
+    use = false
+    arguments {  }
+}
+details = ""
+author = "levi"
+update = "https://raw.githubusercontent.com/leviouwendijk/AgenticCLI/master/build-object.pkl"
