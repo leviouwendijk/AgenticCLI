@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "AgenticCLI",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v13),
     ],
     products: [
         .executable(
@@ -21,19 +21,11 @@ let package = Package(
             branch: "master"
         ),
         .package(
-            url: "https://github.com/leviouwendijk/AgenticInterfaces.git",
+            url: "https://github.com/leviouwendijk/AgenticRuntime.git",
             branch: "master"
         ),
         .package(
             url: "https://github.com/leviouwendijk/AgenticDomains.git",
-            branch: "master"
-        ),
-        .package(
-            url: "https://github.com/leviouwendijk/Arguments.git",
-            branch: "master"
-        ),
-        .package(
-            url: "https://github.com/leviouwendijk/Clipboard.git",
             branch: "master"
         ),
     ],
@@ -46,24 +38,16 @@ let package = Package(
                     package: "Agentic"
                 ),
                 .product(
-                    name: "AgenticInterfaces",
-                    package: "AgenticInterfaces"
+                    name: "AgenticRuntime",
+                    package: "AgenticRuntime"
                 ),
                 .product(
-                    name: "AgenticSwift",
+                    name: "AgenticRuntimeCommands",
+                    package: "AgenticRuntime"
+                ),
+                .product(
+                    name: "AgenticDomains",
                     package: "AgenticDomains"
-                ),
-                .product(
-                    name: "AgenticGit",
-                    package: "AgenticDomains"
-                ),
-                .product(
-                    name: "Arguments",
-                    package: "Arguments"
-                ),
-                .product(
-                    name: "Clipboard",
-                    package: "Clipboard"
                 ),
             ]
         ),

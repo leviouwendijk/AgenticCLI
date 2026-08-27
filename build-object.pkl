@@ -11,8 +11,8 @@ versions {
     }
 }
 compile {
-    use = false
-    arguments {  }
+    use = true
+    arguments { "--products" "agentic" }
 }
 details = ""
 author = "levi"

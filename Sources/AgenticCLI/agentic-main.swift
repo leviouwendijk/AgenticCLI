@@ -1,43 +1,28 @@
-import Arguments
-import Foundation
+import Agentic
+import AgenticDomains
+import AgenticRuntime
+import AgenticRuntimeCommands
 
 @main
-enum AgenticCLICommand: ArgumentCommand {
-    static let name = "agentic"
-    static let defaultChild = HelpCommand.self
-
-    static let children: [ArgumentCommandType] = [
-        HelpCommand.self,
-        AgenticToolCommand.self,
-        AgenticHostCommand.self,
-    ]
+enum AgenticCLI {
+    struct Application:
+        AgenticApplicationProviding
+    {
+        static let application = Agentic.application(
+            "agentic",
+            title: "Agentic",
+            metadata: [
+                "source": "agentic-cli",
+            ]
+        ) {
+            tools {
+                CoreToolSet()
+                AgenticDomainsToolSet()
+            }
+        }
+    }
 
     static func main() async {
-        await ArgumentProgram.main(
-            command: Self.self,
-            errorHandler: { error in
-                AgenticCLI.io.error.write(
-                    error
-                )
-
-                return 1
-            }
-        )
-    }
-}
-
-enum HelpCommand: RunnableArgumentCommand {
-    static let name = "help"
-
-    static func run(
-        _ invocation: ParsedInvocation
-    ) async throws {
-        _ = invocation
-
-        print(
-            ArgumentHelpRenderer().render(
-                command: try AgenticCLICommand.spec()
-            )
-        )
+        await AgenticRuntimeCommand<Application>.main()
     }
 }
