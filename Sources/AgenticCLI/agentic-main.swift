@@ -1,8 +1,10 @@
 import Agentic
+import AgenticApple
 import AgenticExecution
 import AgenticDomains
 import AgenticRuntime
 import AgenticRuntimeCommands
+import AgenticMediaApple
 
 @main
 enum AgenticCLI {
@@ -20,6 +22,19 @@ enum AgenticCLI {
                 CoreToolSet()
                 AgenticDomainsToolSet()
             }
+
+            // adapter(.apple_foundation_models) {
+            //     AppleFoundationModelAdapter()
+            // }
+
+            modelProvider(
+                // AppleFoundationModelProfileProvider()
+                AppleFoundationModelProvider()
+            )
+
+            voiceInput(
+                AppleVoiceInputProvider()
+            )
         }
     }
 
