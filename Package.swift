@@ -1,6 +1,15 @@
 // swift-tools-version: 6.2
 
+import Foundation
 import PackageDescription
+
+let packagedirectory = URL(
+    fileURLWithPath: #filePath
+).deletingLastPathComponent()
+
+let infoPlistPath = packagedirectory.appendingPathComponent(
+    "Support/Info.plist"
+    ).path
 
 let package = Package(
     name: "AgenticCLI",
@@ -18,6 +27,10 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/leviouwendijk/Agentic.git",
+            branch: "master"
+        ),
+        .package(
+            url: "https://github.com/leviouwendijk/AgenticSkills.git",
             branch: "master"
         ),
         .package(
@@ -50,6 +63,10 @@ let package = Package(
                     package: "Agentic"
                 ),
                 .product(
+                    name: "AgenticSkills",
+                    package: "AgenticSkills"
+                ),
+                .product(
                     name: "AgenticExecution",
                     package: "AgenticExecution"
                 ),
@@ -66,12 +83,30 @@ let package = Package(
                     package: "AgenticAdapters"
                 ),
                 .product(
+                    name: "AgenticAWS",
+                    package: "AgenticAdapters"
+                ),
+                .product(
+                    name: "AgenticOllama",
+                    package: "AgenticAdapters"
+                ),
+                .product(
                     name: "AgenticDomains",
                     package: "AgenticDomains"
                 ),
                 .product(
                     name: "AgenticMediaApple",
                     package: "AgenticMedia"
+                ),
+            ],
+            linkerSettings: [
+                .unsafeFlags(
+                    [
+                        "-Xlinker", "-sectcreate",
+                        "-Xlinker", "__TEXT",
+                        "-Xlinker", "__info_plist",
+                        "-Xlinker", infoPlistPath,
+                    ]
                 ),
             ]
         ),

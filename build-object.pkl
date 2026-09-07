@@ -12,7 +12,16 @@ versions {
 }
 compile {
     use = true
-    arguments { "--products" "agentic" }
+    arguments {
+        "--products"
+        "agentic"
+        "--sign"
+        "apple-development"
+        "--sign-identifier"
+        "com.leviouwendijk.agentic"
+        // "--sign-entitlements"
+        // "Support/Agentic.entitlements"
+    }
 }
 details = ""
 author = "levi"

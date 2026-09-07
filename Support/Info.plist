@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.leviouwendijk.agentic</string>
+    <key>CFBundleName</key>
+    <string>Agentic</string>
+    <key>CFBundleDisplayName</key>
+    <string>Agentic</string>
+    <key>CFBundleExecutable</key>
+    <string>agentic</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1.0</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>Agentic accesses your calendars to read and manage calendar events.</string>
+    <key>NSRemindersFullAccessUsageDescription</key>
+    <string>Agentic accesses your reminders to read and manage reminders.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Agentic accesses your location when requested to provide location-aware capabilities such as local weather.</string>
+</dict>
+</plist>

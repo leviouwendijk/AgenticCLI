@@ -1,5 +1,5 @@
 {
-  "originHash" : "91e5441e57d401ba2bde2ffd3653d960361156b2629c6f8e347e3ad734cac5ec",
+  "originHash" : "ec2e6d2511849082de4055bb76be5bad28601de3c2999fdac04161c6e532eb45",
   "pins" : [
     {
       "identity" : "agentic",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/leviouwendijk/Agentic.git",
       "state" : {
         "branch" : "master",
-        "revision" : "0a0ab3a637f114b77374d3aa8bdaa224e4f86d67"
+        "revision" : "851b38f0ff563cef4d2416c167a0e1e93617177c"
       }
     },
     {
@@ -16,7 +16,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticAdapters.git",
       "state" : {
         "branch" : "master",
-        "revision" : "0f5d1bb1ab4ae0cdf8d6eb787470d089cdb7a048"
+        "revision" : "63f3c23611e881f25a5a4347fffb39c72e36292a"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticDomains.git",
       "state" : {
         "branch" : "master",
-        "revision" : "ccc7c73ff11a0dc9b01d21d187c2da7ca8e837ef"
+        "revision" : "3c8e15e1e1579d3115a6b1f2b2740be1531b70fa"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticExecution.git",
       "state" : {
         "branch" : "master",
-        "revision" : "9709a1a7d49cc2e8da98f6ab8de96b9aa100aeff"
+        "revision" : "2ef11661392cf133052395ea388879b3adfd6db3"
       }
     },
     {
@@ -43,7 +43,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticInterfaces.git",
       "state" : {
         "branch" : "master",
-        "revision" : "9b94ffd8a353cfbd8e86422251d798e7eceaba0c"
+        "revision" : "dfb6b23aad667e62e6e295ffaa57e462312d7497"
       }
     },
     {
@@ -52,7 +52,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticIO.git",
       "state" : {
         "branch" : "master",
-        "revision" : "f6b9884a96a54bc2b64f3dadf7c6f8e9acadba44"
+        "revision" : "774632fa25f77a7b49477e6bb62679d0904390a2"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticMedia.git",
       "state" : {
         "branch" : "master",
-        "revision" : "7875cb55b6ffdc7219c82e770cd5e3390742a1db"
+        "revision" : "bad1f7dfdea68af4275f4321208ed1bd07600c6f"
       }
     },
     {
@@ -70,7 +70,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticModels.git",
       "state" : {
         "branch" : "master",
-        "revision" : "7fd2b8bdf61a01e2aebf3fb9b4e1ab3e44ed5245"
+        "revision" : "4acf46e9039edfb1e057e5fd6acc9fd43e136c91"
       }
     },
     {
@@ -79,7 +79,16 @@
       "location" : "https://github.com/leviouwendijk/AgenticRuntime.git",
       "state" : {
         "branch" : "master",
-        "revision" : "84febaaf52d12904aa8c22ee1741591d4d977c88"
+        "revision" : "d3834b7621a77a278e516141ca3462f54d99ca5f"
+      }
+    },
+    {
+      "identity" : "agenticskills",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/leviouwendijk/AgenticSkills.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "da693a5b8ed6278eedccd63010e427a9da4f41f1"
       }
     },
     {
@@ -88,7 +97,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticTools.git",
       "state" : {
         "branch" : "master",
-        "revision" : "4a5b6209848d027720b1c52b9ba83998bbf4c99f"
+        "revision" : "b8c26bde9b992bbf159d2f08d12d51f8f9c2c99f"
       }
     },
     {
@@ -106,7 +115,7 @@
       "location" : "https://github.com/leviouwendijk/AgenticWorkspace.git",
       "state" : {
         "branch" : "master",
-        "revision" : "49fa47b13403ae7e9eb1653ac5e730f17c2ca1b3"
+        "revision" : "3e2242b2ac008e47b7e60f7771b27c60a3ec23e6"
       }
     },
     {
@@ -133,7 +142,7 @@
       "location" : "https://github.com/leviouwendijk/AWSConnector.git",
       "state" : {
         "branch" : "master",
-        "revision" : "4793806c37c357d7bb7b6819bdc12bc3d2710f1c"
+        "revision" : "eafa6908e30c91df3644999d5f00b3c479f7cd39"
       }
     },
     {
@@ -169,7 +178,7 @@
       "location" : "https://github.com/leviouwendijk/Cryptography.git",
       "state" : {
         "branch" : "master",
-        "revision" : "ba5df7a99c519e0c6448303b4c6490dbf08a356a"
+        "revision" : "10e8288325e537cb37fdceb9a3c64273027ce944"
       }
     },
     {
@@ -187,7 +196,16 @@
       "location" : "https://github.com/leviouwendijk/DSL.git",
       "state" : {
         "branch" : "master",
-        "revision" : "9efff74e61ff3679fce19f3cbf6df09c3bc23691"
+        "revision" : "30ec6798f883b91f697d060bb001e0e4f7a09225"
+      }
+    },
+    {
+      "identity" : "errors",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/leviouwendijk/Errors.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8b5f809214ca8ea3401378f1dc673ca60ceaf902"
       }
     },
     {
@@ -196,7 +214,7 @@
       "location" : "https://github.com/leviouwendijk/Executable.git",
       "state" : {
         "branch" : "master",
-        "revision" : "45ccd7795d8364e4ddcf3c81f2bfacd02d453822"
+        "revision" : "28bda797ca5779cf31bc3b8c4ebc6718b73a844c"
       }
     },
     {
@@ -331,7 +349,7 @@
       "location" : "https://github.com/leviouwendijk/Parsers.git",
       "state" : {
         "branch" : "master",
-        "revision" : "d40af0db0f032a7fc9757db068da717c69d8fca8"
+        "revision" : "f2f979c3d2e3b85533dd887bcd90bd0f40d53028"
       }
     },
     {
@@ -385,7 +403,7 @@
       "location" : "https://github.com/leviouwendijk/Primitives.git",
       "state" : {
         "branch" : "master",
-        "revision" : "7b53326bba4229c0b8c62529dfe0934f6ddedf6c"
+        "revision" : "99df450665a2a6b4d9f91cda59b6bcc17e0b2d6f"
       }
     },
     {
@@ -394,7 +412,7 @@
       "location" : "https://github.com/leviouwendijk/Processes.git",
       "state" : {
         "branch" : "master",
-        "revision" : "b505bf0b5f756ebb301346651e86df9346944cbd"
+        "revision" : "48075baeb34d979ef45a785dedb56b0c590b967c"
       }
     },
     {
@@ -515,12 +533,21 @@
       }
     },
     {
+      "identity" : "swiftsemantics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/leviouwendijk/SwiftSemantics.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6f5c7c0028bbe03290d4dc2528ff634942b439c9"
+      }
+    },
+    {
       "identity" : "terminal",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leviouwendijk/Terminal.git",
       "state" : {
         "branch" : "master",
-        "revision" : "3cbec4c35bb44eea80bc0eb167528b8ffa66af4d"
+        "revision" : "77ea187c59b76ae0a804ce65b9beb2ca7c451339"
       }
     },
     {
