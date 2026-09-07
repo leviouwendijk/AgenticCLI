@@ -42,6 +42,14 @@ let package = Package(
             branch: "master"
         ),
         .package(
+            url: "https://github.com/leviouwendijk/AgenticHost.git",
+            branch: "master"
+        ),
+        .package(
+            url: "https://github.com/leviouwendijk/AgenticInterfaces.git",
+            branch: "master"
+        ),
+        .package(
             url: "https://github.com/leviouwendijk/AgenticAdapters.git",
             branch: "master"
         ),
@@ -75,8 +83,16 @@ let package = Package(
                     package: "AgenticRuntime"
                 ),
                 .product(
-                    name: "AgenticRuntimeCommands",
-                    package: "AgenticRuntime"
+                    name: "AgenticHost",
+                    package: "AgenticHost"
+                ),
+                .product(
+                    name: "AgenticCommandLine",
+                    package: "AgenticHost"
+                ),
+                .product(
+                    name: "AgenticInterfaces",
+                    package: "AgenticInterfaces"
                 ),
                 .product(
                     name: "AgenticApple",
@@ -93,6 +109,10 @@ let package = Package(
                 .product(
                     name: "AgenticDomains",
                     package: "AgenticDomains"
+                ),
+                .product(
+                    name: "AgenticMedia",
+                    package: "AgenticMedia"
                 ),
                 .product(
                     name: "AgenticMediaApple",

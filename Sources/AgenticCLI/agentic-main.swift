@@ -6,7 +6,10 @@ import AgenticOllama
 import AgenticExecution
 import AgenticDomains
 import AgenticRuntime
-import AgenticRuntimeCommands
+import AgenticCommandLine
+import AgenticHost
+import AgenticInterfaces
+import AgenticMedia
 import AgenticMediaApple
 
 private let bedrockModel = "us.anthropic.claude-opus-4-6-v1"
@@ -29,8 +32,12 @@ private let bedrockProfile = BedrockModelProfiles.profile(
 @main
 enum AgenticCLI {
     struct Application:
-        AgenticApplicationProviding
+        AgenticApplicationProviding,
+        AgenticVoiceInputProviding
     {
+        static let voiceInputProvider: (any VoiceInputProvider)? =
+            AppleVoiceInputProvider()
+
         static let application = Agentic.application(
             "agentic",
             title: "Agentic",
@@ -39,8 +46,29 @@ enum AgenticCLI {
             ]
         ) {
             tools {
-                CoreToolSet()
-                AgenticDomainsToolSet()
+                collection(
+                    "core",
+                    title: "Core",
+                    defaultExposure: .included
+                ) {
+                    CoreToolSet()
+                }
+
+                collection(
+                    "domains",
+                    title: "Domains",
+                    defaultExposure: .included
+                ) {
+                    AgenticDomainsToolSet()
+                }
+
+                collection(
+                    "media",
+                    title: "Media",
+                    defaultExposure: .excluded
+                ) {
+                    AgenticMediaToolSet()
+                }
             }
 
             skills {
@@ -69,13 +97,10 @@ enum AgenticCLI {
                 )
             )
 
-            voiceInput(
-                AppleVoiceInputProvider()
-            )
         }
     }
 
     static func main() async {
-        await AgenticRuntimeCommand<Application>.main()
+        await Agentic.CommandLine<Application>.main()
     }
 }
