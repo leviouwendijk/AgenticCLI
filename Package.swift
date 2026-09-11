@@ -38,6 +38,10 @@ let package = Package(
             branch: "master"
         ),
         .package(
+            url: "https://github.com/leviouwendijk/AgenticTools.git",
+            branch: "master"
+        ),
+        .package(
             url: "https://github.com/leviouwendijk/AgenticRuntime.git",
             branch: "master"
         ),
@@ -49,8 +53,14 @@ let package = Package(
             url: "https://github.com/leviouwendijk/AgenticInterfaces.git",
             branch: "master"
         ),
+        // Temporarily disabled until AgenticAdapters is rebuilt around
+        // inference adaptation rather than provider-native model execution.
+        // .package(
+        //     url: "https://github.com/leviouwendijk/AgenticAdapters.git",
+        //     branch: "master"
+        // ),
         .package(
-            url: "https://github.com/leviouwendijk/AgenticAdapters.git",
+            url: "https://github.com/leviouwendijk/AgenticProviders.git",
             branch: "master"
         ),
         .package(
@@ -79,6 +89,10 @@ let package = Package(
                     package: "AgenticExecution"
                 ),
                 .product(
+                    name: "AgenticTools",
+                    package: "AgenticTools"
+                ),
+                .product(
                     name: "AgenticRuntime",
                     package: "AgenticRuntime"
                 ),
@@ -96,15 +110,15 @@ let package = Package(
                 ),
                 .product(
                     name: "AgenticApple",
-                    package: "AgenticAdapters"
+                    package: "AgenticProviders"
                 ),
                 .product(
                     name: "AgenticAWS",
-                    package: "AgenticAdapters"
+                    package: "AgenticProviders"
                 ),
                 .product(
                     name: "AgenticOllama",
-                    package: "AgenticAdapters"
+                    package: "AgenticProviders"
                 ),
                 .product(
                     name: "AgenticDomains",

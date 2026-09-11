@@ -4,6 +4,7 @@ import AgenticApple
 import AgenticAWS
 import AgenticOllama
 import AgenticExecution
+import AgenticTools
 import AgenticDomains
 import AgenticRuntime
 import AgenticCommandLine
@@ -55,6 +56,14 @@ enum AgenticCLI {
                 }
 
                 collection(
+                    "guidelines",
+                    title: "Guidelines",
+                    defaultExposure: .included
+                ) {
+                    GuidelineToolSet()
+                }
+
+                collection(
                     "domains",
                     title: "Domains",
                     defaultExposure: .included
@@ -75,10 +84,6 @@ enum AgenticCLI {
                 CoreSkillProvider()
             }
 
-            // adapter(.apple_foundation_models) {
-            //     AppleFoundationModelAdapter()
-            // }
-
             modelProvider(
                 // AppleFoundationModelProfileProvider()
                 AppleFoundationModelProvider()
@@ -90,7 +95,6 @@ enum AgenticCLI {
 
             modelProvider(
                 BedrockModelProvider(
-                    defaultModelIdentifier: bedrockModel,
                     profiles: [
                         bedrockProfile,
                     ]
