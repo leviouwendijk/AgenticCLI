@@ -6,6 +6,7 @@ import AgenticOllama
 import AgenticExecution
 import AgenticTools
 import AgenticDomains
+import AgenticAppleServices
 import AgenticRuntime
 import AgenticCommandLine
 import AgenticHost
@@ -58,7 +59,7 @@ enum AgenticCLI {
                 collection(
                     "guidelines",
                     title: "Guidelines",
-                    defaultExposure: .included
+                    defaultExposure: .excluded
                 ) {
                     GuidelineToolSet()
                 }
@@ -66,7 +67,7 @@ enum AgenticCLI {
                 collection(
                     "domains",
                     title: "Domains",
-                    defaultExposure: .included
+                    defaultExposure: .excluded
                 ) {
                     AgenticDomainsToolSet()
                 }
@@ -78,6 +79,12 @@ enum AgenticCLI {
                 ) {
                     AgenticMediaToolSet()
                 }
+            }
+
+            programs {
+                program(
+                    CreateReminderProgram()
+                )
             }
 
             skills {

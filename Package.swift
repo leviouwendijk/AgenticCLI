@@ -125,6 +125,10 @@ let package = Package(
                     package: "AgenticDomains"
                 ),
                 .product(
+                    name: "AgenticAppleServices",
+                    package: "AgenticDomains"
+                ),
+                .product(
                     name: "AgenticMedia",
                     package: "AgenticMedia"
                 ),
